@@ -142,7 +142,7 @@ namespace PogCode_Interpreter
                         !if (variables.ContainsKey(varPU))
                         {
                             //var exists
-                            ExceptionHandler(6, i, line);
+                            ExceptionHandler(8, i, line);
                         }
                         variables[varPU] = valuePU;
                         break;
