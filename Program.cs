@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -139,12 +139,12 @@ namespace PogCode_Interpreter
                             //invalid arg
                             ExceptionHandler(5, i, line);
                         }
-                        if (variables.ContainsKey(varPU))
+                        !if (variables.ContainsKey(varPU))
                         {
                             //var exists
                             ExceptionHandler(6, i, line);
                         }
-                        variables.Add(varPU, valuePU);
+                        variables[varPU] = valuePU;
                         break;
                     // WeirdChamp - ReadLine + Variable
                     case "WeirdChamp":
@@ -195,26 +195,28 @@ namespace PogCode_Interpreter
                     Console.WriteLine("Unrecognized command: " + line.Substring(0, line.IndexOf(' ')));
                     break;
                 case 1:
-                    Console.WriteLine("No arguments provided.");
+                    Console.WriteLine("Not poggers, no arguments provided.");
                     break;
                 case 2:
-                    Console.WriteLine("Unexpected argument.");
+                    Console.WriteLine("Not poggers, unexpected argument.");
                     break;
                 case 3:
-                    Console.WriteLine("Not enough arguments.");
+                    Console.WriteLine("Not poggers, not enough arguments.");
                     break;
                 case 4:
-                    Console.WriteLine("Too many arguments.");
+                    Console.WriteLine("Not poggers, too many arguments.");
                     break;
                 case 5:
-                    Console.WriteLine("Invalid argument.");
+                    Console.WriteLine("Not poggers, invalid argument.");
                     break;
                 case 6:
-                    Console.WriteLine("Variable already exists.");
+                    Console.WriteLine("Not poggers, variable already exists.");
                     break;
                 case 7:
-                    Console.WriteLine("Improper variable formatting.");
+                    Console.WriteLine("Not poggers, improper variable formatting.");
                     break;
+                case 8:
+                    Console.WriteLine("Not poggers, variable does not exist.")
             }
             Console.ReadLine();
             Environment.Exit(1);
